@@ -1,10 +1,11 @@
 #include <FloatSwitch.h>
 
+// Create a floatSwitch at digital port 2
 FloatSwitch floatSwitch = FloatSwitch(2);
 
 
 void setup() {
-  // put your setup code here, to run once:
+  // Default Arduino Uno baud
   Serial.begin(9600);
 }
 

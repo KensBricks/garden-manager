@@ -28,11 +28,13 @@ Description
 #include "Arduino.h"
 #include "FloatSwitch.h"
 
-/* The switch should be instantiated during void setup() of the main program
+/* The switch should be instantiated outside void setup() and void loop()
+ *  of the main program
  *  e.g.
+ *  FloatSwitch floatSwitch = FloatSwitch(2);
+ *
  *  void setup(){
- *  // Create a floatSwitch at pin 13
- *  FloatSwitch floatSwitch = FloatSwitch(13);
+ *
  *  }
  *
  *
@@ -49,7 +51,7 @@ FloatSwitch::~FloatSwitch(){
   //Do nothing
 }
 
-/* This function should be called in every iteration of void loop() from the main program
+/* The monitor function should be called in every iteration of void loop() from the main program
  *
  *  e.g.
  *
