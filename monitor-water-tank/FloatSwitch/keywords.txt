@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For FloatSwitch
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+FloatSwitch	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+monitor    KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+_pin  LITERAL1
+_startTime  LITERAL1
+isSafe  LITERAL1
+currentTime  LITERAL1
