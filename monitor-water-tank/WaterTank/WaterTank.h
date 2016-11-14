@@ -1,12 +1,11 @@
 /*
 
-<WaterTank.h>
+<FloatSwitch.h>
 Description
 
-    The purpose of the WaterTank is to hold water for use in the garden.
-    The WaterTank has both a FloatSwitch and a WaterPump. The WaterTank
-    monitors the FloatSwitch regularly to make sure it's safe to operate the
-    WaterPump.
+    The WaterTank holds both a FloatSwitch and a WaterPump. By monitoring the
+    FloatSwitch, the WaterTank can decide whether or not it is safe to run the
+    WaterPump. This sketch is a header for a the WaterTank class
 
     Copyright (C) 2016  Kenneth M Moorhead
 
@@ -25,31 +24,24 @@ Description
 
 */
 
-#ifndef WaterTank_H
-#define WaterTank_H
+#ifndef WaterTank_h
+#define WaterTank_h
 
 #include "Arduino.h"
 #include "FloatSwitch.h"
+#include "WaterPump.h"
 
 class WaterTank{
   public:
-    // Constructor will create an instance of WaterTank using previously created
-    // FloatSwitch and WaterPump.
-
-    WaterTank(FloatSwitch);
+    // Constructor will create an instance of FloatSwitch at the designated pin
+    WaterTank(FloatSwitch, WaterPump);
     ~WaterTank();
 
-    // The isSafe value can be toggled true or false to signal whether the water
-    // level in the tank is high enough for safe operation
-    bool isSafe;
-
-    // The monitor function runs at a regular interval to check whether
-    // the water level has dropped to an unsafe point
-    void monitor(int);
+    void waterPlants(int);
 
     private:
-      int _pin;
-      unsigned long _startTime;
+      FloatSwitch _floatSwitch;
+      WaterPump _waterPump;
 };
 
 #endif
