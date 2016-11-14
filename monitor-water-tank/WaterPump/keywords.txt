@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For FloatSwitch
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+WaterPump	KEYWORD1
+~WaterPump KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+loop KEYWORD2
+runPump    KEYWORD2
+stopPump  KEYWORD2
+pumpOn  KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+isRunning LITERAL1
+_pin  LITERAL1
+_isRunning  LITERAL1
+_stopTime   LITERAL1
